@@ -19,7 +19,7 @@ function App() { //css에서는 class 하지만 jsx에서는 className
 
   // <span onClick = { () => {} } 
   let [글제목, 글제목변경] = useState(['남자 코트 추천','강남 고기 맛집','광안리 조개 맛집']);//[state데이터, state데이터 변경 함수]
-  let [따봉, 따봉변경 ] = useState(0);
+  let [따봉, 따봉변경 ] = useState(0)
 
   function 제목바꾸기(){ //데이터를 완전이 갈아치운다
     //복사본을 하나 생성 후 수정
@@ -53,9 +53,24 @@ function App() { //css에서는 class 하지만 jsx에서는 className
         <p>05월 31일 발행</p>
         <hr/>
       </div>
-      
+
+      <Modal/> 
+
+
     </div>
   );
 }
+function Modal(){ //함수를 만들어 준 뒤 함수 이름으로 <div>대신에 짧게 넣을 수 있다.
+  return ( //copmponent 만들기
+    <>
+    <div className = "mobal">
+        <h2>제목</h2>
+        <p>날짜</p>
+        <p>상세내용</p>
+      </div> 
+    </> //이렇게 묶어주면 더 축약해서 사용 가능  <Modal/> <-이런 형태로 사용가능
+  )
+}
+
 
 export default App;
